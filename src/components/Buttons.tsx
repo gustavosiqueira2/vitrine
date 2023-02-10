@@ -6,7 +6,7 @@ type ButtonsProps = {
 }
 
 const Buttons = ({ selectedCard, setSelectedCard }: ButtonsProps) => (
-  <div className="flex gap-2 h-fit w-full">
+  <div className="flex gap-2 w-full">
     <Card
       selected={selectedCard === 'skills'}
       onClick={() => setSelectedCard(selectedCard === 'skills' ? '' : 'skills')}
