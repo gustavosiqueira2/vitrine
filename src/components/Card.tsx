@@ -14,7 +14,7 @@ const Card = ({ children, selected, onClick, className }: CardProps) => (
     }}
     className={`${
       className || ''
-    } card relative flex flex-col p-2 rounded-2xl border-2 border-black`}
+    } card w-full relative flex flex-col p-2 rounded-2xl border-2 border-black`}
   >
     {children}
   </div>

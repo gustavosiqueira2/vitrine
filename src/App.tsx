@@ -4,44 +4,17 @@ import Card from './components/Card'
 
 import me from './assets/me.jpg'
 import { useState } from 'react'
+import Buttons from './components/Buttons'
 
 const App = () => {
   const [selectedCard, setSelectedCard] = useState('')
 
   return (
-    <div className="background w-full h-full flex flex-col flex-wrap gap-6 p-2 sm:p-4 md:p-8 lg:p-12 bg-[#ff4343] overflow-y-auto">
-      <div className="flex gap-2 mb-2">
-        <Card
-          selected={selectedCard === 'sobre'}
-          onClick={() =>
-            setSelectedCard(selectedCard === 'sobre' ? '' : 'sobre')
-          }
-          className="cursor-pointer w-[65px] flex items-center select-none"
-        >
-          Sobre
-        </Card>
-        <Card
-          selected={selectedCard === 'skills'}
-          onClick={() =>
-            setSelectedCard(selectedCard === 'skills' ? '' : 'skills')
-          }
-          className="cursor-pointer w-[65px] flex items-center select-none"
-        >
-          Skills
-        </Card>
-        <Card
-          selected={selectedCard === 'links'}
-          onClick={() =>
-            setSelectedCard(selectedCard === 'links' ? '' : 'links')
-          }
-          className="cursor-pointer w-[65px] flex items-center select-none"
-        >
-          Link
-        </Card>
-      </div>
+    <div className="background sm:h-full flex flex-col flex-wrap gap-6 p-2 sm:p-4 md:p-8 lg:p-12 bg-[#ff4343] overflow-y-auto">
+      <Buttons selectedCard={selectedCard} setSelectedCard={setSelectedCard} />
 
       <div className="flex flex-wrap gap-6">
-        <Card>
+        <Card className="sm:w-[300px]">
           <div className="h-52 w-52 rounded-xl mb-2 overflow-hidden">
             <img src={me} className="h-52 w-52" />
           </div>
@@ -57,12 +30,10 @@ const App = () => {
           </div>
         </Card>
 
-        <Card selected={selectedCard === 'sobre'} className="w-[300px]">
-          <div>
-            <span className="font-bold text-lg w-fit mb-1 highlight-yellow">
-              Sobre mim
-            </span>
-          </div>
+        <Card selected={selectedCard === 'sobre'} className="sm:w-[300px]">
+          <span className="font-bold text-lg w-fit mb-1 highlight-yellow">
+            Sobre mim
+          </span>
 
           <span>
             Atuando como Desenvolvedor Front End / Mobile especializado em
@@ -73,7 +44,18 @@ const App = () => {
         </Card>
       </div>
 
-      <Card selected={selectedCard === 'skills'} className="w-[228px]">
+      <Card>
+        <span className="font-bold text-lg highlight-yellow w-fit">
+          Contato
+        </span>
+      </Card>
+      <Card>
+        <span className="font-bold text-lg highlight-yellow w-fit">
+          Projetos
+        </span>
+      </Card>
+
+      <Card selected={selectedCard === 'skills'} className="sm:w-[228px]">
         <div className="flex items-center justify-between gap-12 text-sm">
           <span className="font-bold text-lg highlight-yellow">Skills</span>
 
@@ -93,10 +75,8 @@ const App = () => {
         ))}
       </Card>
 
-      <Card selected={selectedCard === 'links'} className="w-[228px]">
-        <div>
-          <span className="font-bold text-lg highlight-red w-fit">Links</span>
-        </div>
+      <Card selected={selectedCard === 'links'} className="sm:w-[228px]">
+        <span className="font-bold text-lg highlight-red w-fit">Links</span>
 
         {links.map(({ name, link }) => (
           <div key={`link_${name}`}>

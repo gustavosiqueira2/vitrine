@@ -29,9 +29,9 @@ body {
 }
 
 .background {
-  background-color: #7643ff;
-  background-size: 80px 80px;
-  background-image: linear-gradient(transparent 40px, #fffff4 0px);
+  background-color: #6b38f6;
+  background-size: 24px 24px;
+  background-image: radial-gradient(transparent 4px, #7643ff 4px);
 }
 
 .card {
