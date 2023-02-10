@@ -22,6 +22,7 @@ body {
   background-color: #6b38f6;
   background-size: 24px 24px;
   background-image: radial-gradient(transparent 4px, #7643ff 4px);
+  animation: background 0.5s;
 }
 
 .card {
@@ -44,4 +45,52 @@ body {
 }
 .highlight-yellow {
   background: linear-gradient(to bottom, transparent 65%, #fce041 50%);
+}
+
+@keyframes background {
+  0% {
+    background-image: radial-gradient(transparent 18px, #7643ff 18px);
+  }
+  10% {
+    background-image: radial-gradient(transparent 18px, #7643ff 17px);
+  }
+  20% {
+    background-image: radial-gradient(transparent 18px, #7643ff 16px);
+  }
+  30% {
+    background-image: radial-gradient(transparent 15px, #7643ff 15px);
+  }
+  40% {
+    background-image: radial-gradient(transparent 14px, #7643ff 14px);
+  }
+  50% {
+    background-image: radial-gradient(transparent 13px, #7643ff 13px);
+  }
+  60% {
+    background-image: radial-gradient(transparent 12px, #7643ff 12px);
+  }
+  65% {
+    background-image: radial-gradient(transparent 11px, #7643ff 11px);
+  }
+  70% {
+    background-image: radial-gradient(transparent 10px, #7643ff 10px);
+  }
+  75% {
+    background-image: radial-gradient(transparent 9px, #7643ff 9px);
+  }
+  80% {
+    background-image: radial-gradient(transparent 8px, #7643ff 8px);
+  }
+  85% {
+    background-image: radial-gradient(transparent 7px, #7643ff 7px);
+  }
+  90% {
+    background-image: radial-gradient(transparent 6px, #7643ff 6px);
+  }
+  95% {
+    background-image: radial-gradient(transparent 5px, #7643ff 5px);
+  }
+  100% {
+    background-image: radial-gradient(transparent 4px, #7643ff 4px);
+  }
 }

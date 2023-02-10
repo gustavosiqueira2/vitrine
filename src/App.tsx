@@ -48,7 +48,7 @@ const App = () => {
   }, [])
 
   if (loading) {
-    return <div>carregando</div>
+    return <div></div>
   }
 
   return (
