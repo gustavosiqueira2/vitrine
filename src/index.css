@@ -16,18 +16,6 @@ body {
   height: 100%;
 }
 
-.highlight-green {
-  background: linear-gradient(to bottom, transparent 65%, #4eff8a 50%);
-}
-
-.highlight-red {
-  background: linear-gradient(to bottom, transparent 65%, #ff5f5f 50%);
-}
-
-.highlight-yellow {
-  background: linear-gradient(to bottom, transparent 65%, #fce041 50%);
-}
-
 .background {
   background-color: #6b38f6;
   background-size: 24px 24px;
@@ -38,4 +26,20 @@ body {
   background-color: #e6e6e6;
   background-size: 24px 24px;
   background-image: radial-gradient(transparent 1px, #fffff4 1px);
+}
+
+.highlight-blue {
+  background: linear-gradient(to bottom, transparent 65%, #41ebfc 50%);
+}
+.highlight-blue-green {
+  background: linear-gradient(to bottom, transparent 65%, #41fcc8 50%);
+}
+.highlight-green {
+  background: linear-gradient(to bottom, transparent 65%, #4eff8a 50%);
+}
+.highlight-red {
+  background: linear-gradient(to bottom, transparent 65%, #ff5f5f 50%);
+}
+.highlight-yellow {
+  background: linear-gradient(to bottom, transparent 65%, #fce041 50%);
 }

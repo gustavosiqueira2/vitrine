@@ -6,25 +6,18 @@ type ButtonsProps = {
 }
 
 const Buttons = ({ selectedCard, setSelectedCard }: ButtonsProps) => (
-  <div className="flex gap-2">
-    <Card
-      selected={selectedCard === 'sobre'}
-      onClick={() => setSelectedCard(selectedCard === 'sobre' ? '' : 'sobre')}
-      className="cursor-pointer md:w-[85px] flex items-center select-none"
-    >
-      Sobre
-    </Card>
+  <div className="flex gap-2 h-fit w-full">
     <Card
       selected={selectedCard === 'skills'}
       onClick={() => setSelectedCard(selectedCard === 'skills' ? '' : 'skills')}
-      className="cursor-pointer md:w-[85px] flex items-center select-none"
+      className="cursor-pointer w-full md:w-[85px] flex items-center select-none"
     >
       Skills
     </Card>
     <Card
       selected={selectedCard === 'links'}
       onClick={() => setSelectedCard(selectedCard === 'links' ? '' : 'links')}
-      className="cursor-pointer md:w-[85px] flex items-center select-none"
+      className="cursor-pointer w-full md:w-[85px] flex items-center select-none"
     >
       Link
     </Card>
@@ -33,7 +26,7 @@ const Buttons = ({ selectedCard, setSelectedCard }: ButtonsProps) => (
       onClick={() =>
         setSelectedCard(selectedCard === 'projetos' ? '' : 'projetos')
       }
-      className="cursor-pointer md:w-[85px] flex items-center select-none"
+      className="cursor-pointer w-full md:w-[85px] flex items-center select-none"
     >
       Projetos
     </Card>
@@ -42,7 +35,7 @@ const Buttons = ({ selectedCard, setSelectedCard }: ButtonsProps) => (
       onClick={() =>
         setSelectedCard(selectedCard === 'contato' ? '' : 'contato')
       }
-      className="cursor-pointer md:w-[85px] flex items-center select-none"
+      className="cursor-pointer w-full md:w-[85px] flex items-center select-none"
     >
       Contato
     </Card>
