@@ -10,9 +10,10 @@ import Footer from './components/Footer'
 
 const App = () => {
   const [selectedCard, setSelectedCard] = useState('')
+  const [isLoading, setIsLoading] = useState(true)
   const [projects, setProjects] = useState([])
-  const [loading, setLoading] = useState(true)
   const isFetching = useRef(false)
+  const [isPresenting, setIsPresenting] = useState(true)
 
   const getRepos = async () => {
     try {
@@ -37,7 +38,7 @@ const App = () => {
       console.log(err)
       setProjects([])
     } finally {
-      setLoading(false)
+      setIsLoading(false)
     }
   }
 
@@ -47,12 +48,27 @@ const App = () => {
     }
   }, [])
 
-  if (loading) {
+  if (isLoading) {
     return <div></div>
+  }
+
+  if (isPresenting) {
+    setTimeout(() => {
+      setIsPresenting(false)
+    }, 3000)
+
+    return (
+      <div className="flex flex-col justify-center items-center h-full text-white">
+        <span className="text-4xl font-medium">Gustavo Siqueira</span>
+        <span className="mb-10 text-xl">my portifolio</span>
+      </div>
+    )
   }
 
   return (
     <>
+      <div className="screenfade absolute w-full h-full z-10"></div>
+
       <div className="background sm:h-[calc(100% - 32px)] flex flex-col md:flex-row flex-wrap items-start justify-start gap-6 p-2 pb-12 sm:p-4 md:p-8 lg:p-12 bg-[#ff4343] overflow-y-auto">
         <Buttons
           selectedCard={selectedCard}

@@ -22,7 +22,6 @@ body {
   background-color: #6b38f6;
   background-size: 24px 24px;
   background-image: radial-gradient(transparent 4px, #7643ff 4px);
-  animation: background 0.5s;
 }
 
 .card {
@@ -47,50 +46,57 @@ body {
   background: linear-gradient(to bottom, transparent 65%, #fce041 50%);
 }
 
+.screenfade {
+  background-color: transparent;
+  background-size: 24px 24px;
+  background-image: radial-gradient(transparent 18px, #7643ff 0px);
+  animation: background 0.4s;
+}
+
 @keyframes background {
   0% {
-    background-image: radial-gradient(transparent 18px, #7643ff 18px);
+    background-image: radial-gradient(transparent 0px, #7643ff 0px);
+  }
+  5% {
+    background-image: radial-gradient(transparent 1px, #7643ff 0px);
   }
   10% {
-    background-image: radial-gradient(transparent 18px, #7643ff 17px);
+    background-image: radial-gradient(transparent 2px, #7643ff 0px);
+  }
+  15% {
+    background-image: radial-gradient(transparent 3px, #7643ff 0px);
   }
   20% {
-    background-image: radial-gradient(transparent 18px, #7643ff 16px);
+    background-image: radial-gradient(transparent 4px, #7643ff 0px);
+  }
+  25% {
+    background-image: radial-gradient(transparent 5px, #7643ff 0px);
   }
   30% {
-    background-image: radial-gradient(transparent 15px, #7643ff 15px);
+    background-image: radial-gradient(transparent 6px, #7643ff 0px);
+  }
+  35% {
+    background-image: radial-gradient(transparent 7px, #7643ff 0px);
   }
   40% {
-    background-image: radial-gradient(transparent 14px, #7643ff 14px);
+    background-image: radial-gradient(transparent 8px, #7643ff 0px);
   }
   50% {
-    background-image: radial-gradient(transparent 13px, #7643ff 13px);
+    background-image: radial-gradient(transparent 9px, #7643ff 0px);
   }
   60% {
-    background-image: radial-gradient(transparent 12px, #7643ff 12px);
-  }
-  65% {
-    background-image: radial-gradient(transparent 11px, #7643ff 11px);
+    background-image: radial-gradient(transparent 10px, #7643ff 0px);
   }
   70% {
-    background-image: radial-gradient(transparent 10px, #7643ff 10px);
-  }
-  75% {
-    background-image: radial-gradient(transparent 9px, #7643ff 9px);
+    background-image: radial-gradient(transparent 11px, #7643ff 0px);
   }
   80% {
-    background-image: radial-gradient(transparent 8px, #7643ff 8px);
-  }
-  85% {
-    background-image: radial-gradient(transparent 7px, #7643ff 7px);
+    background-image: radial-gradient(transparent 12px, #7643ff 0px);
   }
   90% {
-    background-image: radial-gradient(transparent 6px, #7643ff 6px);
-  }
-  95% {
-    background-image: radial-gradient(transparent 5px, #7643ff 5px);
+    background-image: radial-gradient(transparent 13px, #7643ff 0px);
   }
   100% {
-    background-image: radial-gradient(transparent 4px, #7643ff 4px);
+    background-image: radial-gradient(transparent 14px, #7643ff 0px);
   }
 }
