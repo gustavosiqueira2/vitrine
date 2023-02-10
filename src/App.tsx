@@ -9,7 +9,7 @@ const App = () => {
   const [selectedCard, setSelectedCard] = useState('')
 
   return (
-    <div className="background w-full h-full flex flex-col flex-wrap gap-6 p-2 sm:p-4 md:p-8 lg:p-12 bg-[#ff4343] ">
+    <div className="background w-full h-full flex flex-col flex-wrap gap-6 p-2 sm:p-4 md:p-8 lg:p-12 bg-[#ff4343] overflow-y-auto">
       <div className="flex gap-2 mb-2">
         <Card
           selected={selectedCard === 'sobre'}
