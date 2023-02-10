@@ -55,7 +55,7 @@ const App = () => {
   if (isPresenting) {
     setTimeout(() => {
       setIsPresenting(false)
-    }, 3000)
+    }, 2000)
 
     return (
       <div className="flex flex-col justify-center items-center h-full text-white">
