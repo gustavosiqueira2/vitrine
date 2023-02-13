@@ -1,7 +1,11 @@
-import Card from '../components/Card'
+import Card from '../Card'
 
-const Contact = ({ selectedCard }: { selectedCard: string }) => (
-  <Card selected={selectedCard === 'contato'}>
+type ContactProps = {
+  selected: boolean
+}
+
+const Contact = ({ selected }: ContactProps) => (
+  <Card wiggle={selected}>
     <span className="font-bold text-lg highlight-blue-green w-fit">
       Contato
     </span>

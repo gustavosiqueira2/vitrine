@@ -1,8 +1,13 @@
-import { skills } from '../assets/skills'
-import Card from '../components/Card'
+import { skills } from '../../utils/assets/skills'
 
-const Skills = ({ selectedCard }: { selectedCard: string }) => (
-  <Card selected={selectedCard === 'skills'} className="md:w-[300px]">
+import Card from '../Card'
+
+type SkillsProps = {
+  selected: boolean
+}
+
+const Skills = ({ selected }: SkillsProps) => (
+  <Card wiggle={selected} className="md:w-[300px]">
     <div className="flex items-center justify-between gap-12 text-sm">
       <span className="font-bold text-lg highlight-yellow">Skills</span>
 

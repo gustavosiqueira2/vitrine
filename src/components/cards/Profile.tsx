@@ -1,6 +1,6 @@
-import Card from '../components/Card'
+import Card from '../Card'
 
-import me from '../assets/me.jpg'
+import me from '../../utils/assets/me.jpg'
 
 const Profile = () => (
   <Card className="md:w-[300px]">

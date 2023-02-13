@@ -46,6 +46,26 @@ body {
   background: linear-gradient(to bottom, transparent 65%, #fce041 50%);
 }
 
+.wiggle {
+  animation: wiggle 0.5s 2;
+  animation-timing-function: linear;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(-1deg);
+  }
+  66% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .animate-blur {
   animation: blur 2s;
 }
