@@ -68,7 +68,7 @@ const App = () => {
     <>
       <ScreenBackgroundFade />
 
-      <div className="background sm:h-[calc(100% - 32px)] flex flex-col md:flex-row flex-wrap items-start justify-start gap-6 p-2 pb-12 sm:p-4 md:p-8 lg:p-12 bg-[#ff4343] overflow-y-auto">
+      <div className="background sm:h-[calc(100% - 32px)] flex flex-col md:flex-row flex-wrap items-start justify-start gap-6 p-2 pb-12 sm:p-4 md:p-8 lg:p-12 overflow-y-auto">
         <Buttons
           selectedCard={selectedCard}
           setSelectedCard={setSelectedCard}
@@ -95,7 +95,13 @@ const App = () => {
               </div>
             ))}
 
-            <span className="self-end underline cursor-pointer">ver mais</span>
+            <a
+              href="https://github.com/gustavosiqueira2"
+              target="_blank"
+              className="self-end underline cursor-pointer"
+            >
+              ver mais
+            </a>
           </Card>
         )}
 
