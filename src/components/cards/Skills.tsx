@@ -1,3 +1,4 @@
+import { CARD_NAMES } from '../../utils/constants/CARD_NAMES'
 import { skills } from '../../utils/assets/skills'
 
 import Card from '../Card'
@@ -7,7 +8,7 @@ type SkillsProps = {
 }
 
 const Skills = ({ selected }: SkillsProps) => (
-  <Card wiggle={selected} className="md:w-[300px]">
+  <Card name={CARD_NAMES.SKILLS} wiggle={selected} className="md:w-[300px]">
     <div className="flex items-center justify-between gap-12 text-sm">
       <span className="font-bold text-lg highlight-yellow">Skills</span>
 

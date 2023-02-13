@@ -1,4 +1,5 @@
-import { links } from '../../utils/assets/links'
+import { CARD_NAMES } from '../../utils/constants/CARD_NAMES'
+
 import Card from '../Card'
 
 type ProjectsProps = {
@@ -7,7 +8,7 @@ type ProjectsProps = {
 }
 
 const Projects = ({ selected, projects }: ProjectsProps) => (
-  <Card wiggle={selected}>
+  <Card name={CARD_NAMES.PROJECTS} wiggle={selected}>
     <span className="font-bold text-lg highlight-blue w-fit">Projetos</span>
 
     {projects.map(({ name, description, url }) => (

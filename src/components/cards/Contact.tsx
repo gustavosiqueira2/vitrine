@@ -1,3 +1,5 @@
+import { CARD_NAMES } from '../../utils/constants/CARD_NAMES'
+
 import Card from '../Card'
 
 type ContactProps = {
@@ -5,7 +7,7 @@ type ContactProps = {
 }
 
 const Contact = ({ selected }: ContactProps) => (
-  <Card wiggle={selected}>
+  <Card name={CARD_NAMES.CONTACT} wiggle={selected}>
     <span className="font-bold text-lg highlight-blue-green w-fit">
       Contato
     </span>
