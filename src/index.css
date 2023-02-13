@@ -46,6 +46,19 @@ body {
   background: linear-gradient(to bottom, transparent 65%, #fce041 50%);
 }
 
+.animate-blur {
+  animation: blur 2s;
+}
+
+@keyframes blur {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
 .screenfade {
   background-color: transparent;
   background-size: 24px 24px;

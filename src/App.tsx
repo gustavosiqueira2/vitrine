@@ -7,13 +7,14 @@ import Links from './cards/Links'
 import Profile from './cards/Profile'
 import Contact from './cards/Contact'
 import Footer from './components/Footer'
+import ScreenBackgroundFade from './components/ScreenBackgroundFade'
 
 const App = () => {
   const [selectedCard, setSelectedCard] = useState('')
   const [isLoading, setIsLoading] = useState(true)
   const [projects, setProjects] = useState([])
-  const isFetching = useRef(false)
   const [isPresenting, setIsPresenting] = useState(true)
+  const isFetching = useRef(false)
 
   const getRepos = async () => {
     try {
@@ -48,17 +49,15 @@ const App = () => {
     }
   }, [])
 
-  if (isLoading) {
-    return <div></div>
-  }
-
-  if (isPresenting) {
-    setTimeout(() => {
-      setIsPresenting(false)
-    }, 2000)
+  if (isLoading || isPresenting) {
+    if (!isLoading) {
+      setTimeout(() => {
+        setIsPresenting(false)
+      }, 3000)
+    }
 
     return (
-      <div className="flex flex-col justify-center items-center h-full text-white">
+      <div className="animate-blur flex flex-col justify-center items-center h-full text-white">
         <span className="text-4xl font-medium">Gustavo Siqueira</span>
         <span className="mb-10 text-xl">my portifolio</span>
       </div>
@@ -67,7 +66,7 @@ const App = () => {
 
   return (
     <>
-      <div className="screenfade absolute w-full h-full z-10"></div>
+      <ScreenBackgroundFade />
 
       <div className="background sm:h-[calc(100% - 32px)] flex flex-col md:flex-row flex-wrap items-start justify-start gap-6 p-2 pb-12 sm:p-4 md:p-8 lg:p-12 bg-[#ff4343] overflow-y-auto">
         <Buttons
