@@ -8,7 +8,11 @@ type ProjectsProps = {
 }
 
 const Projects = ({ selected, projects }: ProjectsProps) => (
-  <Card name={CARD_NAMES.PROJECTS} wiggle={selected}>
+  <Card
+    name={CARD_NAMES.PROJECTS}
+    wiggle={selected}
+    className="w-full md:w-fit"
+  >
     <span className="font-bold text-lg highlight-blue w-fit">Projetos</span>
 
     {projects.map(({ name, description, url }) => (

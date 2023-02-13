@@ -7,7 +7,7 @@ type ContactProps = {
 }
 
 const Contact = ({ selected }: ContactProps) => (
-  <Card name={CARD_NAMES.CONTACT} wiggle={selected}>
+  <Card name={CARD_NAMES.CONTACT} wiggle={selected} className="w-full md:w-fit">
     <span className="font-bold text-lg highlight-blue-green w-fit">
       Contato
     </span>
