@@ -20,7 +20,7 @@ const Buttons = ({ setSelectedCard }: ButtonsProps) => {
   }
 
   return (
-    <div className="md:fixed top-4 right-4 flex justify-end gap-2 w-full">
+    <div className="w-full md:fixed top-4 flex justify-end gap-2 px-4 pt-4 md:pt-0">
       <Card
         onClick={() => handleChangeSelectedCard(CARD_NAMES.ME)}
         className={CARD_BUTTON_CLASSES}

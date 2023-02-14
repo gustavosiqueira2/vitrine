@@ -11,7 +11,7 @@ const Projects = ({ selected, projects }: ProjectsProps) => (
   <Card
     name={CARD_NAMES.PROJECTS}
     wiggle={selected}
-    className="w-full md:w-fit h-fit self-center"
+    className="w-full md:w-fit"
   >
     <span className="font-bold text-lg highlight-blue w-fit">
       Projetos favoritos

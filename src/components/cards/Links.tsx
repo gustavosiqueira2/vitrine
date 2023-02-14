@@ -8,8 +8,8 @@ type LinksProps = {
 }
 
 const Links = ({ selected }: LinksProps) => (
-  <Card name={CARD_NAMES.CONTACT} wiggle={selected} className="min-w-[240px]">
-    <span className="font-bold text-lg highlight-red w-fit">Links</span>
+  <Card name={CARD_NAMES.CONTACT} wiggle={selected} className="min-w-[265px]">
+    <span className="font-bold text-lg highlight-blue-green w-fit">Links</span>
 
     {links.map(({ name, link }) => (
       <div key={`link_${name}`}>
