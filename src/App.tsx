@@ -39,7 +39,7 @@ const App = () => {
     <>
       <ScreenBackgroundFade />
 
-      <div className="background sm:h-[calc(100% - 32px)] flex flex-col justify-center gap-6 p-2 pb-12 sm:p-4 md:p-8 overflow-y-auto">
+      <div className="background sm:h-[calc(100% - 32px)] flex flex-col justify-center gap-6 p-2 sm:p-4 md:p-8 md:pt-14 pb-8 overflow-y-auto">
         <Buttons setSelectedCard={setSelectedCard} />
 
         <div className="flex flex-wrap items-center justify-center gap-6 w-full">
@@ -67,12 +67,14 @@ const App = () => {
               </div>
             </Card>
           </div>
+        </div>
 
-          <div className="flex flex-col gap-6 w-full md:w-fit">
-            <Contact selected={selectedCard === CARD_NAMES.CONTACT} />
+        <div className="md:mb-12" />
 
-            <Links selected={selectedCard === CARD_NAMES.LINKS} />
-          </div>
+        <div className="flex flex-warp justify-center gap-6 w-full">
+          <Contact selected={selectedCard === CARD_NAMES.CONTACT} />
+
+          <Links selected={selectedCard === CARD_NAMES.CONTACT} />
         </div>
 
         <div className="md:mb-12" />
