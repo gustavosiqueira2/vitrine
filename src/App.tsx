@@ -24,15 +24,15 @@ const App = () => {
 
   const [selectedCard, setSelectedCard] = useState<CARD_NAMES | ''>('')
 
-  // if (isLoadingProjects || isPresenting) {
-  //   if (!isLoadingProjects) {
-  //     setTimeout(() => {
-  //       setIsPresenting(false)
-  //     }, 3000)
-  //   }
+  if (isLoadingProjects || isPresenting) {
+    if (!isLoadingProjects) {
+      setTimeout(() => {
+        setIsPresenting(false)
+      }, 3000)
+    }
 
-  //   return <PresentationScreen />
-  // }
+    return <PresentationScreen />
+  }
 
   return (
     <>
