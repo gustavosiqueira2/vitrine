@@ -16,6 +16,7 @@ import Buttons from './components/Buttons'
 import Footer from './components/Footer'
 
 import Card from './components/Card'
+import GitHeart from './components/cards/GitHeart/GitHeart'
 
 const App = () => {
   const { isLoadingProjects, projects } = useProjects()
@@ -83,8 +84,10 @@ const App = () => {
           />
         )}
 
-        <div className="w-full flex justify-center">
+        <div className="w-full flex flex-wrap gap-6 justify-center">
           <Hourglass />
+
+          <GitHeart />
         </div>
       </div>
 
