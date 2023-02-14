@@ -20,7 +20,7 @@ const Buttons = ({ setSelectedCard }: ButtonsProps) => {
   }
 
   return (
-    <div className="flex gap-2 w-full">
+    <div className="flex justify-center gap-2 w-full mb-3">
       <Card
         onClick={() => handleChangeSelectedCard(CARD_NAMES.SKILLS)}
         className={CARD_BUTTON_CLASSES}

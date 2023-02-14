@@ -8,7 +8,7 @@ type SkillsProps = {
 }
 
 const Skills = ({ selected }: SkillsProps) => (
-  <Card name={CARD_NAMES.SKILLS} wiggle={selected} className="md:w-[300px]">
+  <Card name={CARD_NAMES.SKILLS} wiggle={selected}>
     <div className="flex items-center justify-between gap-12 text-sm">
       <span className="font-bold text-lg highlight-yellow">Skills</span>
 

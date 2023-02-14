@@ -7,7 +7,11 @@ type ContactProps = {
 }
 
 const Contact = ({ selected }: ContactProps) => (
-  <Card name={CARD_NAMES.CONTACT} wiggle={selected} className="w-full md:w-fit">
+  <Card
+    name={CARD_NAMES.CONTACT}
+    wiggle={selected}
+    className="w-full md:w-fit h-fit"
+  >
     <span className="font-bold text-lg highlight-blue-green w-fit">
       Contato
     </span>
@@ -19,7 +23,12 @@ const Contact = ({ selected }: ContactProps) => (
       <b>Telefone:</b> +55 (19) 99530-6810
     </span>
     <span>
-      <b>Linkedin:</b> https://www.linkedin.com/in/gustavofariasdesiqueira/
+      <a
+        href=" https://www.linkedin.com/in/gustavofariasdesiqueira/"
+        target="_blank"
+      >
+        <b>Linkedin:</b>
+      </a>
     </span>
   </Card>
 )

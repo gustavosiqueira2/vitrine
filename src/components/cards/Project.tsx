@@ -11,16 +11,20 @@ const Projects = ({ selected, projects }: ProjectsProps) => (
   <Card
     name={CARD_NAMES.PROJECTS}
     wiggle={selected}
-    className="w-full md:w-fit"
+    className="w-full md:w-fit h-fit"
   >
-    <span className="font-bold text-lg highlight-blue w-fit">Projetos</span>
+    <span className="font-bold text-lg highlight-blue w-fit">
+      Projetos favoritos
+    </span>
 
-    {projects.map(({ name, description, url }) => (
-      <div key={`project_${name}`} className="flex flex-col mb-2">
-        <span className="font-bold text-gray-900">{name}</span>
-        <span className="text-gray-700">{description}</span>
-      </div>
-    ))}
+    <div className="flex  gap-2">
+      {projects.map(({ name, description, url }) => (
+        <div key={`project_${name}`} className="flex flex-col">
+          <span className="font-bold text-gray-900">{name}</span>
+          <span className="text-gray-700">{description}</span>
+        </div>
+      ))}
+    </div>
 
     <a
       href="https://github.com/gustavosiqueira2"
