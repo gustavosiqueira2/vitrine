@@ -21,7 +21,6 @@ const useHourglass = (lines: number = 14) => {
   const nextStepTimeoutReference = useRef<number>()
 
   useEffect(() => {
-    console.log('RODOU')
     if (isFirstTime.current) {
       isFirstTime.current = false
 

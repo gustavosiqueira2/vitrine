@@ -1,9 +1,14 @@
 import Card from '../Card'
 
+import { CARD_NAMES } from '../../utils/constants/CARD_NAMES'
 import me from '../../utils/assets/me.jpg'
 
-const Profile = () => (
-  <Card className="md:w-[300px]">
+type ProfileProps = {
+  selected: boolean
+}
+
+const Profile = ({ selected }: ProfileProps) => (
+  <Card name={CARD_NAMES.ME} wiggle={selected} className="md:w-[300px]">
     <div className="flex justify-center h-52 w-full bg-gray-200 mb-2 rounded-xl overflow-hidden">
       <img src={me} className="h-72 w-72" />
     </div>

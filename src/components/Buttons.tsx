@@ -22,28 +22,17 @@ const Buttons = ({ setSelectedCard }: ButtonsProps) => {
   return (
     <div className="flex justify-center gap-2 w-full mb-3">
       <Card
-        onClick={() => handleChangeSelectedCard(CARD_NAMES.SKILLS)}
+        onClick={() => handleChangeSelectedCard(CARD_NAMES.ME)}
         className={CARD_BUTTON_CLASSES}
       >
-        Skills
+        About Me
       </Card>
-      <Card
-        onClick={() => handleChangeSelectedCard(CARD_NAMES.LINKS)}
-        className={CARD_BUTTON_CLASSES}
-      >
-        Links
-      </Card>
+
       <Card
         onClick={() => handleChangeSelectedCard(CARD_NAMES.PROJECTS)}
         className={CARD_BUTTON_CLASSES}
       >
-        Projetos
-      </Card>
-      <Card
-        onClick={() => handleChangeSelectedCard(CARD_NAMES.CONTACT)}
-        className={CARD_BUTTON_CLASSES}
-      >
-        Contato
+        Projects
       </Card>
     </div>
   )

@@ -22,14 +22,6 @@ const Contact = ({ selected }: ContactProps) => (
     <span>
       <b>Telefone:</b> +55 (19) 99530-6810
     </span>
-    <span>
-      <a
-        href=" https://www.linkedin.com/in/gustavofariasdesiqueira/"
-        target="_blank"
-      >
-        <b>Linkedin:</b>
-      </a>
-    </span>
   </Card>
 )
 

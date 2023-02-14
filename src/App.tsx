@@ -42,7 +42,7 @@ const App = () => {
         <Buttons setSelectedCard={setSelectedCard} />
 
         <div className="flex flex-wrap items-center justify-center gap-6 w-full">
-          <Profile />
+          <Profile selected={selectedCard === CARD_NAMES.ME} />
 
           <div className="flex flex-col gap-6 w-full md:w-fit">
             <Skills selected={selectedCard === CARD_NAMES.SKILLS} />
@@ -63,19 +63,18 @@ const App = () => {
                   <span>Firebase</span>
                   <span>Docker</span>
                 </div>
-                <div className="flex items-center justify-between gap-4">
-                  <span>NestJS</span>
-                  <span>Adonis</span>
-                  <span></span>
-                </div>
               </div>
             </Card>
+          </div>
 
+          <div className="flex flex-col gap-6 w-full md:w-fit">
             <Contact selected={selectedCard === CARD_NAMES.CONTACT} />
+
+            <Links selected={selectedCard === CARD_NAMES.LINKS} />
           </div>
         </div>
 
-        <Links selected={selectedCard === CARD_NAMES.LINKS} />
+        <div className="md:mb-12" />
 
         {projects.length > 0 && (
           <Projects
@@ -84,7 +83,9 @@ const App = () => {
           />
         )}
 
-        <Hourglass />
+        <div className="w-full flex justify-center">
+          <Hourglass />
+        </div>
       </div>
 
       <Footer />

@@ -5,7 +5,7 @@ const Hourglass = () => {
   const { hourglass, resetHourglass } = runHourglass()
 
   return (
-    <Card>
+    <Card className="w-fit">
       <div className="flex items-center justify-between">
         <span className="font-bold text-lg highlight-blue w-fit mb-2">
           Ampulheta

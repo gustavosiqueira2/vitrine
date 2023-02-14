@@ -11,15 +11,15 @@ const Projects = ({ selected, projects }: ProjectsProps) => (
   <Card
     name={CARD_NAMES.PROJECTS}
     wiggle={selected}
-    className="w-full md:w-fit h-fit"
+    className="w-full md:w-fit h-fit self-center"
   >
     <span className="font-bold text-lg highlight-blue w-fit">
       Projetos favoritos
     </span>
 
-    <div className="flex  gap-2">
+    <div className="grid md:grid-cols-2 gap-x-12 gap-y-2">
       {projects.map(({ name, description, url }) => (
-        <div key={`project_${name}`} className="flex flex-col">
+        <div key={`project_${name}`} className="flex flex-col w-fit">
           <span className="font-bold text-gray-900">{name}</span>
           <span className="text-gray-700">{description}</span>
         </div>
