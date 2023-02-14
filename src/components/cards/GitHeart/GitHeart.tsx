@@ -1,6 +1,6 @@
 import Card from '../../Card'
 
-import { heartShapes } from './HeartShapes'
+import { heartShapes } from './heartShapes'
 
 const GitHeart = () => (
   <Card>
